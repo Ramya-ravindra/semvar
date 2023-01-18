@@ -4,7 +4,7 @@ branches:
     prerelease: true
  
 preset: "angular"
-tagFormat: "0.0.2"
+tagFormat: "v1.1.0"
 plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
