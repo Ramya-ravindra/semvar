@@ -1,0 +1,25 @@
+name: sem-var
+
+on:
+ push:
+  branches:
+    - main
+ 
+    
+
+jobs:
+ job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+         persist-credentials: false
+      - uses: actions/setup-node@v3
+        with:
+         node-version: 18.x
+      - name: setup semantic-release
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
+      - name: release
+        env:
+         GITHUB_TOKEN: ${{ secrets.token }}
+        run: npx semantic-release
