@@ -2,7 +2,10 @@ branches:
   - main
   - name: alpha
     prerelease: true
- 
+debug: true
+ci: true
+dryRun: false
+repositoryUrl: "https://github.com/Ramya-ravindra/semvar"
 preset: "angular"
 tagFormat: "${version}"
 plugins:
